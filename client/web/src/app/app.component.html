@@ -1,0 +1,16 @@
+<!--
+   Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+   SPDX-License-Identifier: MIT-0
+-->
+
+
+<ng-container *ngIf="!isMobile; else blocked">
+  <div ngClass="main" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start center">
+    <router-outlet></router-outlet>
+  </div>
+
+</ng-container>
+
+<ng-template #blocked>
+  <app-blocked></app-blocked>
+</ng-template>
